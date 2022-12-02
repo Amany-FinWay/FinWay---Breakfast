@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>spicy</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   <style>
+      .carousel-control-next,
+      .carousel-control-prev {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         display: -ms-flexbox;
+         display: flex;
+         -ms-flex-align: center;
+         align-items: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         width: 8%;
+         color: #fff;
+         text-align: center;
+         opacity: 1;
+      }
+   </style>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- end header inner -->
+   <!-- end header -->
+   <!-- banner -->
+   <section class="banner_main">
+      <div class="w-100">
+         <div class="works py-3 m-0">
+            <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel"
+               data-pause="hover">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-4">
+                              <div id="white_bg" class="works_box">
+                                 <h4>Amany</h4>
+                                 <br><br><br>
+                                 <div class="Amany-order-container">
+                                    <table class="_tableAmany GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success" onclick="create_trAmany('table_bodyAmany')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyAmany">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameAmany"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberAmany"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trAmany(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddAmanyOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <div id="white_bg" class="works_box ">
+                                 <h4>Norhan</h4>
+                                 <br><br><br>
+                                 <div class="Norhan-order-container">
+                                    <table class="_tableNorhan GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success"
+                                                      onclick="create_trNorhan('table_bodyNorhan')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyNorhan">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameNorhan"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberNorhan"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trNorhan(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddNorhanOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div id="white_bg" class="works_box">
+                                 <h4>Hady</h4>
+                                 <br><br><br>
+                                 <div class="Hady-order-container">
+                                    <table class="_tableHady GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success" onclick="create_trHady('table_bodyHady')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyHady">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameHady"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberHady"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trHady(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddHadyOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-4">
+                              <div id="white_bg" class="works_box">
+                                 <h4>Abduallah</h4>
+                                 <br><br><br>
+                                 <div class="Abduallah-order-container">
+                                    <table class="_tableAbduallah GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success" onclick="create_trAbduallah('table_bodyAbduallah')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyAbduallah">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameAbduallah"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberAbduallah"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trAbduallah(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddAbduallahOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <div id="white_bg" class="works_box ">
+                                 <h4>Maysarah</h4>
+                                 <br><br><br>
+                                 <div class="Maysarah-order-container">
+                                    <table class="_tableMaysarah GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success"
+                                                      onclick="create_trMaysarah('table_bodyMaysarah')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyMaysarah">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameMaysarah"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberMaysarah"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trMaysarah(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddMaysarahOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div id="white_bg" class="works_box">
+                                 <h4>Elshreif</h4>
+                                 <br><br><br>
+                                 <div class="Elshreif-order-container">
+                                    <table class="_tableElshreif GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="success" onclick="create_trElshreif('table_bodyElshreif')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyElshreif">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameElshreif"
+                                                   placeholder="فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberElshreif"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trElshreif(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <tfoot>
+                                       <button class="secondery w-100 p-1" onclick="AddElshreifOrder()">Done</button>
+                                    </tfoot>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+            <!-- <div class="col-md-4">
+                     <div id="white_bg" class="works_box">
+                        <h4>Amany</h4>
+                        <br><br><br>
+                        <div class="Amany-order-container">
+                           <table class="_tableAmany GeneralTable">
+                              <thead>
+                                 <tr>
+                                    <th>Sandwich</th>
+                                    <th>Quantity</th>
+                                    <th width="50px">
+                                       <div class="action_container">
+                                          <button class="success" onclick="create_trAmany('table_bodyAmany')">
+                                             <i class="fa fa-plus"></i>
+                                          </button>
+                                       </div>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody id="table_bodyAmany">
+                                 <tr>
+                                    <td>
+                                       <input type="text" class="form_control sandwichesNameAmany" placeholder="فول">
+                                    </td>
+                                    <td>
+                                       <input type="number" class="form_control quantityNumberAmany"
+                                          placeholder="Ex: 1">
+                                    </td>
+                                    <td>
+                                       <div class="action_container">
+                                          <button class="danger" onclick="remove_trAmany(this)">
+                                             <i class="fa fa-close"></i>
+                                          </button>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <tfoot>
+                              <button class="secondery w-100 p-1" onclick="AddAmanyOrder()">Done</button>
+                           </tfoot>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div id="white_bg" class="works_box ">
+                        <h4>Norhan</h4>
+                        <br><br><br>
+                        <div class="Norhan-order-container">
+                           <table class="_tableNorhan GeneralTable">
+                              <thead>
+                                 <tr>
+                                    <th>Sandwich</th>
+                                    <th>Quantity</th>
+                                    <th width="50px">
+                                       <div class="action_container">
+                                          <button class="success" onclick="create_trNorhan('table_bodyNorhan')">
+                                             <i class="fa fa-plus"></i>
+                                          </button>
+                                       </div>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody id="table_bodyNorhan">
+                                 <tr>
+                                    <td>
+                                       <input type="text" class="form_control sandwichesNameNorhan" placeholder="فول">
+                                    </td>
+                                    <td>
+                                       <input type="number" class="form_control quantityNumberNorhan"
+                                          placeholder="Ex: 1">
+                                    </td>
+                                    <td>
+                                       <div class="action_container">
+                                          <button class="danger" onclick="remove_trNorhan(this)">
+                                             <i class="fa fa-close"></i>
+                                          </button>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <tfoot>
+                              <button class="secondery w-100 p-1" onclick="AddNorhanOrder()">Done</button>
+                           </tfoot>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div id="white_bg" class="works_box">
+                        <h4>Hady</h4>
+                        <br><br><br>
+                        <div class="Hady-order-container">
+                           <table class="_tableHady GeneralTable">
+                              <thead>
+                                 <tr>
+                                    <th>Sandwich</th>
+                                    <th>Quantity</th>
+                                    <th width="50px">
+                                       <div class="action_container">
+                                          <button class="success" onclick="create_trHady('table_bodyHady')">
+                                             <i class="fa fa-plus"></i>
+                                          </button>
+                                       </div>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody id="table_bodyHady">
+                                 <tr>
+                                    <td>
+                                       <input type="text" class="form_control sandwichesNameHady" placeholder="فول">
+                                    </td>
+                                    <td>
+                                       <input type="number" class="form_control quantityNumberHady" placeholder="Ex: 1">
+                                    </td>
+                                    <td>
+                                       <div class="action_container">
+                                          <button class="danger" onclick="remove_trHady(this)">
+                                             <i class="fa fa-close"></i>
+                                          </button>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <tfoot>
+                              <button class="secondery w-100 p-1" onclick="AddHadyOrder()">Done</button>
+                           </tfoot>
+                        </div>
+                     </div>
+                  </div> -->
+         </div>
+      </div>
+   </section>
+   <!-- end banner -->
+   <!-- food -->
+   <div class="food">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2> <strong class="yellow">Final </strong>Order</h2>
+                  <span>Ready! </span> <button class="d-inline" onclick="GetFinalOrder()">Get Final Order</button>
+                  <div class="demo"></div>
+               </div>
+            </div>
+         </div>
+         <div class="row justify-content-center d-none" id="OrderParent">
+            <div class="col-md-6 m-auto">
+               <div class="food_box">
+                  <i><img src="images/BreakFast.png" alt="#" /></i>
+                  <h4>Here you go</h4>
+                  <div id="Finalorder-container"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end food -->
+
+
+   <!--  footer -->
+   <footer>
+      <div class="footer">
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>Copyright 2022 All Right Reserved By <b><i>Amany Abdelfattah</i></b></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="./data.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>

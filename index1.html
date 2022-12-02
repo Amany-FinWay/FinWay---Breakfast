@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <script src="./data.js"></script>
+    <style>
+        body {
+            font-family: 'Rubik Microbe', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello!!</h1>
+    <button onclick="AddNewOrder()">Add</button>
+    <script>
+        function AddNewOrder() {
+            myData.Employees = Object.assign(
+                {
+                    "Pola": [
+                        { "sandwiches": 'فلافل', 'quantity': 2 },
+                        { "sandwiches": 'طعمية', 'quantity': 2 }
+                    ]
+                },
+                {
+                    "Kandeel": [
+                        { "sandwiches": 'فول', 'quantity': 2 }
+                    ]
+                },
+                {
+                    "Islam": [
+                        { "sandwiches": 'بطاطس سلطة طحينة', 'quantity': 2 }
+                    ]
+                },
+
+                myData.Employees);
+            let names = [],
+                sandwiches = [],
+                quantity = [],
+                duplicate = [],
+                FinalOrder = [];
+
+
+            console.log(myData);
+            for (var make in myData.Employees) {
+                names.push(make);
+                for (var i = 0; i < myData.Employees[make].length; i++) {
+                    sandwiches.push(myData.Employees[make][i].sandwiches);
+                    quantity.push(myData.Employees[make][i].quantity);
+                    FinalOrder.push(
+                        { "sandwiches": myData.Employees[make][i].sandwiches, "quantity": myData.Employees[make][i].quantity }
+                    )
+                }
+            }
+            var holder = {};
+
+            FinalOrder.forEach(function (d) {
+                if (holder.hasOwnProperty(d.sandwiches)) {
+                    holder[d.sandwiches] = holder[d.sandwiches] + d.quantity;
+                } else {
+                    holder[d.sandwiches] = d.quantity;
+                }
+            });
+
+            var obj2 = [];
+
+            for (var prop in holder) {
+                obj2.push({ sandwiches: prop, quantity: holder[prop] });
+            }
+            console.log(obj2);
+        }
+
+
+        
+        //console.log(names);
+        //console.log(sandwiches);
+        //console.log(quantity);
+        //console.log(FinalOrder);
+    </script>
+
+</body>
+
+</html>
