@@ -941,4 +941,9 @@ input::-webkit-inner-spin-button {
           margin-top: -90px;
           max-width: 60%;
      }
+     .carousel-control-next,
+     .carousel-control-prev{
+     top: 29%;
+     height: 5%;
+}
 }
