@@ -23,8 +23,13 @@ function clean_first_trAmany(firstTrAmany) {
 	});
 }
 function remove_trAmany(This) {
+	myData.Employees.Amany = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
@@ -70,8 +75,13 @@ function clean_first_trNorhan(firstTrNorhan) {
 	});
 }
 function remove_trNorhan(This) {
+	myData.Employees.Norhan = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
@@ -116,8 +126,13 @@ function clean_first_trHady(firstTrHady) {
 	});
 }
 function remove_trHady(This) {
+	myData.Employees.Hady = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
@@ -162,8 +177,13 @@ function clean_first_trAbduallah(firstTrAbduallah) {
 	});
 }
 function remove_trAbduallah(This) {
+	myData.Employees.Abduallah = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
@@ -206,8 +226,13 @@ function clean_first_trMaysarah(firstTrMaysarah) {
 	});
 }
 function remove_trMaysarah(This) {
+	myData.Employees.Maysarah = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
@@ -250,8 +275,13 @@ function clean_first_trElshreif(firstTrElshreif) {
 	});
 }
 function remove_trElshreif(This) {
+	myData.Employees.Elshreif = [];
 	if (This.closest('tbody').childElementCount == 1) {
-		alert("You Don't have Permission to Delete This ?");
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
 	} else {
 		This.closest('tr').remove();
 	}
