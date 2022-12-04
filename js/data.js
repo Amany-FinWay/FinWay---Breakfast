@@ -4,6 +4,20 @@ var myData = {
 /* Start Amany's Order*/
 let sandwichesNameAmany = document.getElementsByClassName("sandwichesNameAmany"),
 	quantityNumberAmany = document.getElementsByClassName("quantityNumberAmany");
+for (let kkk = 0; kkk < sandwichesNameAmany.length; kkk++) {
+	sandwichesNameAmany[kkk].onkeyup = function () {
+		console.log(sandwichesNameAmany[kkk].value);
+		if (sandwichesNameAmany[kkk].value == "اومليت رومي") {
+			document.getElementById("PayAmount").innerHTML = Number(11);
+		} else if (sandwichesNameAmany[kkk].value == "بطاطس كاتشب مايونيز") {
+			let total = 0;
+			var span_number = parseFloat(Number(8) + Number(2) + Number(document.getElementById("PayAmount").textContent));
+			total += span_number;
+			document.getElementById("PayAmount").textContent = total
+		}
+	}
+}
+
 function create_trAmany(tableAmany_id) {
 	let table_bodyAmany = document.getElementById(tableAmany_id),
 		first_trAmany = table_bodyAmany.firstElementChild
@@ -13,6 +27,7 @@ function create_trAmany(tableAmany_id) {
 
 	clean_first_trAmany(table_bodyAmany.firstElementChild);
 }
+
 function clean_first_trAmany(firstTrAmany) {
 	let childrenAmany = firstTrAmany.children;
 	childrenAmany = Array.isArray(childrenAmany) ? childrenAmany : Object.values(childrenAmany);
@@ -22,6 +37,7 @@ function clean_first_trAmany(firstTrAmany) {
 		}
 	});
 }
+
 function remove_trAmany(This) {
 	myData.Employees.Amany = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -34,6 +50,7 @@ function remove_trAmany(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddAmanyOrder() {
 	myData.Employees.Amany = [];
 	var title = [];
@@ -66,6 +83,7 @@ function create_trNorhan(tableNorhan_id) {
 
 	clean_first_trNorhan(table_bodyNorhan.firstElementChild);
 }
+
 function clean_first_trNorhan(firstTrNorhan) {
 	let childrenNorhan = firstTrNorhan.children;
 	childrenNorhan = Array.isArray(childrenNorhan) ? childrenNorhan : Object.values(childrenNorhan);
@@ -75,6 +93,7 @@ function clean_first_trNorhan(firstTrNorhan) {
 		}
 	});
 }
+
 function remove_trNorhan(This) {
 	myData.Employees.Norhan = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -87,6 +106,7 @@ function remove_trNorhan(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddNorhanOrder() {
 	myData.Employees.Norhan = [];
 	var titlen = [];
@@ -118,6 +138,7 @@ function create_trHady(tableHady_id) {
 
 	clean_first_trHady(table_bodyHady.firstElementChild);
 }
+
 function clean_first_trHady(firstTrHady) {
 	let childrenHady = firstTrHady.children;
 	childrenHady = Array.isArray(childrenHady) ? childrenHady : Object.values(childrenHady);
@@ -127,6 +148,7 @@ function clean_first_trHady(firstTrHady) {
 		}
 	});
 }
+
 function remove_trHady(This) {
 	myData.Employees.Hady = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -139,6 +161,7 @@ function remove_trHady(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddHadyOrder() {
 	myData.Employees.Hady = [];
 	var titlen = [];
@@ -158,7 +181,7 @@ function AddHadyOrder() {
 /* End Hady's Order */
 
 /* Start Abduallah's Order */
-	let sandwichesNameAbduallah = document.getElementsByClassName("sandwichesNameAbduallah"),
+let sandwichesNameAbduallah = document.getElementsByClassName("sandwichesNameAbduallah"),
 	quantityNumberAbduallah = document.getElementsByClassName("quantityNumberAbduallah");
 
 function create_trAbduallah(tableAbduallah_id) {
@@ -170,6 +193,7 @@ function create_trAbduallah(tableAbduallah_id) {
 
 	clean_first_trAbduallah(table_bodyAbduallah.firstElementChild);
 }
+
 function clean_first_trAbduallah(firstTrAbduallah) {
 	let childrenAbduallah = firstTrAbduallah.children;
 	childrenAbduallah = Array.isArray(childrenAbduallah) ? childrenAbduallah : Object.values(childrenAbduallah);
@@ -179,6 +203,7 @@ function clean_first_trAbduallah(firstTrAbduallah) {
 		}
 	});
 }
+
 function remove_trAbduallah(This) {
 	myData.Employees.Abduallah = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -191,6 +216,7 @@ function remove_trAbduallah(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddAbduallahOrder() {
 	myData.Employees.Abduallah = [];
 	var titlen = [];
@@ -202,13 +228,13 @@ function AddAbduallahOrder() {
 			};
 		}
 
-	myData.Employees.Abduallah = Object.assign(titlen, myData.Employees.Abduallah);
-	console.log(myData);
-}
+		myData.Employees.Abduallah = Object.assign(titlen, myData.Employees.Abduallah);
+		console.log(myData);
+	}
 }
 /* End Start Abduallah's Order */
 /* Start Maysarah's Order */
-	let sandwichesNameMaysarah = document.getElementsByClassName("sandwichesNameMaysarah"),
+let sandwichesNameMaysarah = document.getElementsByClassName("sandwichesNameMaysarah"),
 	quantityNumberMaysarah = document.getElementsByClassName("quantityNumberMaysarah");
 
 function create_trMaysarah(tableMaysarah_id) {
@@ -220,6 +246,7 @@ function create_trMaysarah(tableMaysarah_id) {
 
 	clean_first_trMaysarah(table_bodyMaysarah.firstElementChild);
 }
+
 function clean_first_trMaysarah(firstTrMaysarah) {
 	let childrenMaysarah = firstTrMaysarah.children;
 	childrenMaysarah = Array.isArray(childrenMaysarah) ? childrenMaysarah : Object.values(childrenMaysarah);
@@ -229,6 +256,7 @@ function clean_first_trMaysarah(firstTrMaysarah) {
 		}
 	});
 }
+
 function remove_trMaysarah(This) {
 	myData.Employees.Maysarah = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -241,6 +269,7 @@ function remove_trMaysarah(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddMaysarahOrder() {
 	myData.Employees.Maysarah = [];
 	var titlen = [];
@@ -252,13 +281,13 @@ function AddMaysarahOrder() {
 			};
 		}
 
-	myData.Employees.Maysarah = Object.assign(titlen, myData.Employees.Maysarah);
-	console.log(myData);
-}
+		myData.Employees.Maysarah = Object.assign(titlen, myData.Employees.Maysarah);
+		console.log(myData);
+	}
 }
 /* End Maysarah's Order */
 /* Start Elshreif's Order */
-	let sandwichesNameElshreif = document.getElementsByClassName("sandwichesNameElshreif"),
+let sandwichesNameElshreif = document.getElementsByClassName("sandwichesNameElshreif"),
 	quantityNumberElshreif = document.getElementsByClassName("quantityNumberElshreif");
 
 function create_trElshreif(tableElshreif_id) {
@@ -270,6 +299,7 @@ function create_trElshreif(tableElshreif_id) {
 
 	clean_first_trElshreif(table_bodyElshreif.firstElementChild);
 }
+
 function clean_first_trElshreif(firstTrElshreif) {
 	let childrenElshreif = firstTrElshreif.children;
 	childrenElshreif = Array.isArray(childrenElshreif) ? childrenElshreif : Object.values(childrenElshreif);
@@ -279,6 +309,7 @@ function clean_first_trElshreif(firstTrElshreif) {
 		}
 	});
 }
+
 function remove_trElshreif(This) {
 	myData.Employees.Elshreif = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -291,6 +322,7 @@ function remove_trElshreif(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddElshreifOrder() {
 	myData.Employees.Elshreif = [];
 	var titlen = [];
@@ -302,9 +334,9 @@ function AddElshreifOrder() {
 			};
 		}
 
-	myData.Employees.Elshreif = Object.assign(titlen, myData.Employees.Elshreif);
-	console.log(myData);
-}
+		myData.Employees.Elshreif = Object.assign(titlen, myData.Employees.Elshreif);
+		console.log(myData);
+	}
 }
 /* End Elshreif's Order */
 /* Start Menecy's Order */
@@ -320,6 +352,7 @@ function create_trMenecy(tableMenecy_id) {
 
 	clean_first_trMenecy(table_bodyMenecy.firstElementChild);
 }
+
 function clean_first_trMenecy(firstTrMenecy) {
 	let childrenMenecy = firstTrMenecy.children;
 	childrenMenecy = Array.isArray(childrenMenecy) ? childrenMenecy : Object.values(childrenMenecy);
@@ -329,6 +362,7 @@ function clean_first_trMenecy(firstTrMenecy) {
 		}
 	});
 }
+
 function remove_trMenecy(This) {
 	myData.Employees.Menecy = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -341,6 +375,7 @@ function remove_trMenecy(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddMenecyOrder() {
 	myData.Employees.Menecy = [];
 	var titlen = [];
@@ -370,6 +405,7 @@ function create_trKhaled(tableKhaled_id) {
 
 	clean_first_trKhaled(table_bodyKhaled.firstElementChild);
 }
+
 function clean_first_trKhaled(firstTrKhaled) {
 	let childrenKhaled = firstTrKhaled.children;
 	childrenKhaled = Array.isArray(childrenKhaled) ? childrenKhaled : Object.values(childrenKhaled);
@@ -379,6 +415,7 @@ function clean_first_trKhaled(firstTrKhaled) {
 		}
 	});
 }
+
 function remove_trKhaled(This) {
 	myData.Employees.Khaled = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -391,6 +428,7 @@ function remove_trKhaled(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddKhaledOrder() {
 	myData.Employees.Khaled = [];
 	var titlen = [];
@@ -420,6 +458,7 @@ function create_trShehab(tableShehab_id) {
 
 	clean_first_trShehab(table_bodyShehab.firstElementChild);
 }
+
 function clean_first_trShehab(firstTrShehab) {
 	let childrenShehab = firstTrShehab.children;
 	childrenShehab = Array.isArray(childrenShehab) ? childrenShehab : Object.values(childrenShehab);
@@ -429,6 +468,7 @@ function clean_first_trShehab(firstTrShehab) {
 		}
 	});
 }
+
 function remove_trShehab(This) {
 	myData.Employees.Shehab = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -441,6 +481,7 @@ function remove_trShehab(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddShehabOrder() {
 	myData.Employees.Shehab = [];
 	var titlen = [];
@@ -470,6 +511,7 @@ function create_trPola(tablePola_id) {
 
 	clean_first_trPola(table_bodyPola.firstElementChild);
 }
+
 function clean_first_trPola(firstTrPola) {
 	let childrenPola = firstTrPola.children;
 	childrenPola = Array.isArray(childrenPola) ? childrenPola : Object.values(childrenPola);
@@ -479,6 +521,7 @@ function clean_first_trPola(firstTrPola) {
 		}
 	});
 }
+
 function remove_trPola(This) {
 	myData.Employees.Pola = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -491,6 +534,7 @@ function remove_trPola(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddPolaOrder() {
 	myData.Employees.Pola = [];
 	var titlen = [];
@@ -520,6 +564,7 @@ function create_trRagab(tableRagab_id) {
 
 	clean_first_trRagab(table_bodyRagab.firstElementChild);
 }
+
 function clean_first_trRagab(firstTrRagab) {
 	let childrenRagab = firstTrRagab.children;
 	childrenRagab = Array.isArray(childrenRagab) ? childrenRagab : Object.values(childrenRagab);
@@ -529,6 +574,7 @@ function clean_first_trRagab(firstTrRagab) {
 		}
 	});
 }
+
 function remove_trRagab(This) {
 	myData.Employees.Ragab = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -541,6 +587,7 @@ function remove_trRagab(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddRagabOrder() {
 	myData.Employees.Ragab = [];
 	var titlen = [];
@@ -570,6 +617,7 @@ function create_trSoliman(tableSoliman_id) {
 
 	clean_first_trSoliman(table_bodySoliman.firstElementChild);
 }
+
 function clean_first_trSoliman(firstTrSoliman) {
 	let childrenSoliman = firstTrSoliman.children;
 	childrenSoliman = Array.isArray(childrenSoliman) ? childrenSoliman : Object.values(childrenSoliman);
@@ -579,6 +627,7 @@ function clean_first_trSoliman(firstTrSoliman) {
 		}
 	});
 }
+
 function remove_trSoliman(This) {
 	myData.Employees.Soliman = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -591,6 +640,7 @@ function remove_trSoliman(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddSolimanOrder() {
 	myData.Employees.Soliman = [];
 	var titlen = [];
@@ -620,6 +670,7 @@ function create_trSaeed(tableSaeed_id) {
 
 	clean_first_trSaeed(table_bodySaeed.firstElementChild);
 }
+
 function clean_first_trSaeed(firstTrSaeed) {
 	let childrenSaeed = firstTrSaeed.children;
 	childrenSaeed = Array.isArray(childrenSaeed) ? childrenSaeed : Object.values(childrenSaeed);
@@ -629,6 +680,7 @@ function clean_first_trSaeed(firstTrSaeed) {
 		}
 	});
 }
+
 function remove_trSaeed(This) {
 	myData.Employees.Saeed = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -641,6 +693,7 @@ function remove_trSaeed(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddSaeedOrder() {
 	myData.Employees.Saeed = [];
 	var titlen = [];
@@ -670,6 +723,7 @@ function create_trKandeel(tableKandeel_id) {
 
 	clean_first_trKandeel(table_bodyKandeel.firstElementChild);
 }
+
 function clean_first_trKandeel(firstTrKandeel) {
 	let childrenKandeel = firstTrKandeel.children;
 	childrenKandeel = Array.isArray(childrenKandeel) ? childrenKandeel : Object.values(childrenKandeel);
@@ -679,6 +733,7 @@ function clean_first_trKandeel(firstTrKandeel) {
 		}
 	});
 }
+
 function remove_trKandeel(This) {
 	myData.Employees.Kandeel = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -691,6 +746,7 @@ function remove_trKandeel(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddKandeelOrder() {
 	myData.Employees.Kandeel = [];
 	var titlen = [];
@@ -720,6 +776,7 @@ function create_trIslam(tableIslam_id) {
 
 	clean_first_trIslam(table_bodyIslam.firstElementChild);
 }
+
 function clean_first_trIslam(firstTrIslam) {
 	let childrenIslam = firstTrIslam.children;
 	childrenIslam = Array.isArray(childrenIslam) ? childrenIslam : Object.values(childrenIslam);
@@ -729,6 +786,7 @@ function clean_first_trIslam(firstTrIslam) {
 		}
 	});
 }
+
 function remove_trIslam(This) {
 	myData.Employees.Islam = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -741,6 +799,7 @@ function remove_trIslam(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddIslamOrder() {
 	myData.Employees.Islam = [];
 	var titlen = [];
@@ -770,6 +829,7 @@ function create_trWaleed(tableWaleed_id) {
 
 	clean_first_trWaleed(table_bodyWaleed.firstElementChild);
 }
+
 function clean_first_trWaleed(firstTrWaleed) {
 	let childrenWaleed = firstTrWaleed.children;
 	childrenWaleed = Array.isArray(childrenWaleed) ? childrenWaleed : Object.values(childrenWaleed);
@@ -779,6 +839,7 @@ function clean_first_trWaleed(firstTrWaleed) {
 		}
 	});
 }
+
 function remove_trWaleed(This) {
 	myData.Employees.Waleed = [];
 	if (This.closest('tbody').childElementCount == 1) {
@@ -791,6 +852,7 @@ function remove_trWaleed(This) {
 		This.closest('tr').remove();
 	}
 }
+
 function AddWaleedOrder() {
 	myData.Employees.Waleed = [];
 	var titlen = [];
@@ -807,9 +869,9 @@ function AddWaleedOrder() {
 	}
 }
 /* End Waleed's Order */
-function GetFinalOrder(){
+function GetFinalOrder() {
 	document.getElementById("OrderParent").classList.remove("d-none");
-		let names = [],
+	let names = [],
 		sandwiches = [],
 		quantity = [],
 		FinalOrder = [],
@@ -819,9 +881,10 @@ function GetFinalOrder(){
 		for (var i = 0; i < myData.Employees[make].length; i++) {
 			sandwiches.push(myData.Employees[make][i].sandwiches);
 			quantity.push(myData.Employees[make][i].quantity);
-			FinalOrder.push(
-				{ "sandwiches": myData.Employees[make][i].sandwiches, "quantity": myData.Employees[make][i].quantity }
-			)
+			FinalOrder.push({
+				"sandwiches": myData.Employees[make][i].sandwiches,
+				"quantity": myData.Employees[make][i].quantity
+			})
 		}
 	}
 	var holder = {};
@@ -837,17 +900,20 @@ function GetFinalOrder(){
 	var obj2 = [];
 
 	for (var prop in holder) {
-		obj2.push({ sandwiches: prop, quantity: holder[prop] });
+		obj2.push({
+			sandwiches: prop,
+			quantity: holder[prop]
+		});
 	}
 	console.log(obj2);
 	FinalOrderTable = "<table id='OrderTable'><tr><th>Sandwiches</th><th>#</th></tr>";
-    for (var i = 0; i < obj2.length; i++) {
-        FinalOrderTable+="<tr>";
-        FinalOrderTable+="<td>"+obj2[i].sandwiches+"</td>";
-        FinalOrderTable+="<td>"+obj2[i].quantity+"</td>";
-        FinalOrderTable+="</tr>";
+	for (var i = 0; i < obj2.length; i++) {
+		FinalOrderTable += "<tr>";
+		FinalOrderTable += "<td>" + obj2[i].sandwiches + "</td>";
+		FinalOrderTable += "<td>" + obj2[i].quantity + "</td>";
+		FinalOrderTable += "</tr>";
 
-    }
-    FinalOrderTable+="</table>";
-document.getElementById("Finalorder-container").innerHTML = FinalOrderTable;
+	}
+	FinalOrderTable += "</table>";
+	document.getElementById("Finalorder-container").innerHTML = FinalOrderTable;
 }

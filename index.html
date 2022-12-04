@@ -29,9 +29,15 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Petemoss&family=Rubik+Microbe&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css" integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Petemoss&family=Rubik+Microbe&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css"
+      integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <!-- body -->
 
@@ -47,7 +53,8 @@
       <div class="w-100">
          <div class="works m-0">
             <div class="overlay"></div>
-            <div id="carouselExampleControls" class="my-5 carousel slide" data-interval="false" data-bs-ride="carousel" data-pause="hover">
+            <div id="carouselExampleControls" class="my-5 carousel slide" data-interval="false" data-bs-ride="carousel"
+               data-pause="hover">
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="container">
@@ -83,6 +90,7 @@
                                              </td>
                                              <td>
                                                 <div class="action_container">
+
                                                    <button class="danger" onclick="remove_trAmany(this)">
                                                       <i class="fa fa-close"></i>
                                                    </button>
@@ -92,7 +100,8 @@
                                        </tbody>
                                     </table>
                                     <div class="action_container w-100">
-                                       <button class="success w-100 p-1" onclick="AddAmanyOrder()">Done</button>
+                                       <span class="col-5 secondery">Total: <span id="PayAmount">0</span></span>
+                                       <button class="success p-1 col-7" onclick="AddAmanyOrder()">Done</button>
                                     </div>
                                  </div>
 
@@ -207,7 +216,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trAbduallah('table_bodyAbduallah')">
+                                                   <button class="primary"
+                                                      onclick="create_trAbduallah('table_bodyAbduallah')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -299,7 +309,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trElshreif('table_bodyElshreif')">
+                                                   <button class="primary"
+                                                      onclick="create_trElshreif('table_bodyElshreif')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -350,7 +361,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trMenecy('table_bodyMenecy')">
+                                                   <button class="primary"
+                                                      onclick="create_trMenecy('table_bodyMenecy')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -442,7 +454,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trShehab('table_bodyShehab')">
+                                                   <button class="primary"
+                                                      onclick="create_trShehab('table_bodyShehab')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -481,6 +494,52 @@
                   <div class="carousel-item">
                      <div class="container">
                         <div class="row">
+                           <div class="col-md-4">
+                              <div id="white_bg" class="works_box">
+                                 <h4>Pola</h4>
+                                 <br><br><br>
+                                 <div class="Pola-order-container">
+                                    <table class="_tablePola GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="primary" onclick="create_trPola('table_bodyPola')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyPola">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNamePola"
+                                                   placeholder="Ex: فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberPola"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trPola(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <div class="action_container w-100">
+                                       <button class="success w-100 p-1" onclick="AddPolaOrder()">Done</button>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
                            <div class="col-md-4">
                               <div id="white_bg" class="works_box">
                                  <h4>Ragab</h4>
@@ -573,6 +632,12 @@
                                  </div>
                               </div>
                            </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
                            <div class="col-md-4">
                               <div id="white_bg" class="works_box">
                                  <h4>Saeed</h4>
@@ -618,12 +683,6 @@
                                  </div>
                               </div>
                            </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="row">
                            <div class="col-md-4">
                               <div id="white_bg" class="works_box">
                                  <h4>Kandeel</h4>
@@ -636,7 +695,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trRagab('table_bodyKandeel')">
+                                                   <button class="primary"
+                                                      onclick="create_trRagab('table_bodyKandeel')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -716,6 +776,12 @@
                                  </div>
                               </div>
                            </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="row">
                            <div class="col-md-4">
                               <div id="white_bg" class="works_box">
                                  <h4>Waleed</h4>
@@ -728,7 +794,8 @@
                                              <th>Quantity</th>
                                              <th width="50px">
                                                 <div class="action_container">
-                                                   <button class="primary" onclick="create_trWaleed('table_bodyWaleed')">
+                                                   <button class="primary"
+                                                      onclick="create_trWaleed('table_bodyWaleed')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -917,7 +984,8 @@
             <div class="col-md-12">
                <div class="titlepage">
                   <h2> <strong class="yellow">Final </strong>Order</h2>
-                  <span>Ready! </span> <button class="d-inline btn-success btn my-2" id="get-order" onclick="GetFinalOrder()">Get Final Order</button>
+                  <span>Ready! </span> <button class="d-inline btn-success btn my-2" id="get-order"
+                     onclick="GetFinalOrder()">Get Final Order</button>
                   <div class="demo"></div>
                </div>
             </div>
@@ -961,8 +1029,30 @@
    <script src="js/data.js"></script>
    <script src="js/custom.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js" integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js"
+      integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+   <script>
+      let sandwichesNameAmanyyyyy = document.getElementsByClassName('sandwichesNameAmany');
+      for (let kkk = 0; kkk < sandwichesNameAmanyyyyy.length; kkk++) {
+         sandwichesNameAmanyyyyy[kkk].onkeyup = function () {
+            console.log(sandwichesNameAmanyyyyy[kkk].value);
+            if (sandwichesNameAmanyyyyy[kkk].value == "اومليت رومي") {
+               document.getElementById("PayAmount").innerHTML = Number(11);
+            } else if (sandwichesNameAmanyyyyy[kkk].value == "بطاطس كاتشب مايونيز") {
+               let total = 0;
+               var span_number = parseFloat(Number(8) + Number(2) + Number(document.getElementById("PayAmount").textContent));
+               // Number(document.getElementById("PayAmount").innerHTML) = Number(8) + document.getElementById("PayAmount").innerHTML + Number(2)
+               total += span_number;
+               document.getElementById("PayAmount").textContent = total
+            }
+         }
+      }
+
+   </script>
 </body>
 
 </html>
