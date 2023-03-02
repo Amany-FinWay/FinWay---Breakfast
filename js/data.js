@@ -69,33 +69,33 @@ function AddAmanyOrder() {
 }
 /* End Amany's Order*/
 
-/* Start Norhan's Order */
+/* Start Donia's Order */
 
-let sandwichesNameNorhan = document.getElementsByClassName("sandwichesNameNorhan"),
-	quantityNumberNorhan = document.getElementsByClassName("quantityNumberNorhan");
+let sandwichesNameDonia = document.getElementsByClassName("sandwichesNameDonia"),
+	quantityNumberDonia = document.getElementsByClassName("quantityNumberDonia");
 
-function create_trNorhan(tableNorhan_id) {
-	let table_bodyNorhan = document.getElementById(tableNorhan_id),
-		first_trNorhan = table_bodyNorhan.firstElementChild
-	tr_cloneNorhan = first_trNorhan.cloneNode(true);
+function create_trDonia(tableDonia_id) {
+	let table_bodyDonia = document.getElementById(tableDonia_id),
+		first_trDonia = table_bodyDonia.firstElementChild
+	tr_cloneDonia = first_trDonia.cloneNode(true);
 
-	table_bodyNorhan.append(tr_cloneNorhan);
+	table_bodyDonia.append(tr_cloneDonia);
 
-	clean_first_trNorhan(table_bodyNorhan.firstElementChild);
+	clean_first_trDonia(table_bodyDonia.firstElementChild);
 }
 
-function clean_first_trNorhan(firstTrNorhan) {
-	let childrenNorhan = firstTrNorhan.children;
-	childrenNorhan = Array.isArray(childrenNorhan) ? childrenNorhan : Object.values(childrenNorhan);
-	childrenNorhan.forEach(x => {
-		if (x !== firstTrNorhan.lastElementChild) {
+function clean_first_trDonia(firstTrDonia) {
+	let childrenDonia = firstTrDonia.children;
+	childrenDonia = Array.isArray(childrenDonia) ? childrenDonia : Object.values(childrenDonia);
+	childrenDonia.forEach(x => {
+		if (x !== firstTrDonia.lastElementChild) {
 			x.firstElementChild.value = '';
 		}
 	});
 }
 
-function remove_trNorhan(This) {
-	myData.Employees.Norhan = [];
+function remove_trDonia(This) {
+	myData.Employees.Donia = [];
 	if (This.closest('tbody').childElementCount == 1) {
 		Swal.fire({
 			icon: 'error',
@@ -107,78 +107,23 @@ function remove_trNorhan(This) {
 	}
 }
 
-function AddNorhanOrder() {
-	myData.Employees.Norhan = [];
+function AddDoniaOrder() {
+	myData.Employees.Donia = [];
 	var titlen = [];
-	for (var i = 0; i < sandwichesNameNorhan.length; i++) {
-		for (var i = 0; i < quantityNumberNorhan.length; i++) {
+	for (var i = 0; i < sandwichesNameDonia.length; i++) {
+		for (var i = 0; i < quantityNumberDonia.length; i++) {
 			titlen[i] = {
-				sandwiches: sandwichesNameNorhan[i].value,
-				quantity: Number(quantityNumberNorhan[i].value)
+				sandwiches: sandwichesNameDonia[i].value,
+				quantity: Number(quantityNumberDonia[i].value)
 			};
 		}
 
 	}
 
-	myData.Employees.Norhan = Object.assign(titlen, myData.Employees.Norhan);
+	myData.Employees.Donia = Object.assign(titlen, myData.Employees.Donia);
 	console.log(myData);
 }
-/* End Norhan's Order */
-
-/* Start Hady's Order */
-let sandwichesNameHady = document.getElementsByClassName("sandwichesNameHady"),
-	quantityNumberHady = document.getElementsByClassName("quantityNumberHady");
-
-function create_trHady(tableHady_id) {
-	let table_bodyHady = document.getElementById(tableHady_id),
-		first_trHady = table_bodyHady.firstElementChild
-	tr_cloneHady = first_trHady.cloneNode(true);
-
-	table_bodyHady.append(tr_cloneHady);
-
-	clean_first_trHady(table_bodyHady.firstElementChild);
-}
-
-function clean_first_trHady(firstTrHady) {
-	let childrenHady = firstTrHady.children;
-	childrenHady = Array.isArray(childrenHady) ? childrenHady : Object.values(childrenHady);
-	childrenHady.forEach(x => {
-		if (x !== firstTrHady.lastElementChild) {
-			x.firstElementChild.value = '';
-		}
-	});
-}
-
-function remove_trHady(This) {
-	myData.Employees.Hady = [];
-	if (This.closest('tbody').childElementCount == 1) {
-		Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: "You don't have permission to delete This",
-		})
-	} else {
-		This.closest('tr').remove();
-	}
-}
-
-function AddHadyOrder() {
-	myData.Employees.Hady = [];
-	var titlen = [];
-	for (var i = 0; i < sandwichesNameHady.length; i++) {
-		for (var i = 0; i < quantityNumberHady.length; i++) {
-			titlen[i] = {
-				sandwiches: sandwichesNameHady[i].value,
-				quantity: Number(quantityNumberHady[i].value)
-			};
-		}
-
-	}
-
-	myData.Employees.Hady = Object.assign(titlen, myData.Employees.Hady);
-	console.log(myData);
-}
-/* End Hady's Order */
+/* End Donia's Order */
 
 /* Start Abduallah's Order */
 let sandwichesNameAbduallah = document.getElementsByClassName("sandwichesNameAbduallah"),
@@ -710,59 +655,6 @@ function AddSaeedOrder() {
 	}
 }
 /* End Saeed's Order */
-/* Satrt Kandeel's Order */
-let sandwichesNameKandeel = document.getElementsByClassName("sandwichesNameKandeel"),
-	quantityNumberKandeel = document.getElementsByClassName("quantityNumberKandeel");
-
-function create_trKandeel(tableKandeel_id) {
-	let table_bodyKandeel = document.getElementById(tableKandeel_id),
-		first_trKandeel = table_bodyKandeel.firstElementChild
-	tr_cloneKandeel = first_trKandeel.cloneNode(true);
-
-	table_bodyKandeel.append(tr_cloneKandeel);
-
-	clean_first_trKandeel(table_bodyKandeel.firstElementChild);
-}
-
-function clean_first_trKandeel(firstTrKandeel) {
-	let childrenKandeel = firstTrKandeel.children;
-	childrenKandeel = Array.isArray(childrenKandeel) ? childrenKandeel : Object.values(childrenKandeel);
-	childrenKandeel.forEach(x => {
-		if (x !== firstTrKandeel.lastElementChild) {
-			x.firstElementChild.value = '';
-		}
-	});
-}
-
-function remove_trKandeel(This) {
-	myData.Employees.Kandeel = [];
-	if (This.closest('tbody').childElementCount == 1) {
-		Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: "You don't have permission to delete This",
-		})
-	} else {
-		This.closest('tr').remove();
-	}
-}
-
-function AddKandeelOrder() {
-	myData.Employees.Kandeel = [];
-	var titlen = [];
-	for (var i = 0; i < sandwichesNameKandeel.length; i++) {
-		for (var i = 0; i < quantityNumberKandeel.length; i++) {
-			titlen[i] = {
-				sandwiches: sandwichesNameKandeel[i].value,
-				quantity: Number(quantityNumberKandeel[i].value)
-			};
-		}
-
-		myData.Employees.Kandeel = Object.assign(titlen, myData.Employees.Kandeel);
-		console.log(myData);
-	}
-}
-/* End Kandeel's Order */
 /* Start Islam's Order */
 let sandwichesNameIslam = document.getElementsByClassName("sandwichesNameIslam"),
 	quantityNumberIslam = document.getElementsByClassName("quantityNumberIslam");
