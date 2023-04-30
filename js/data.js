@@ -867,6 +867,112 @@ function AddElGammalOrder() {
 	}
 }
 /* End Gamal's Order */
+/* Start Ali's Order */
+let sandwichesNameSaad = document.getElementsByClassName("sandwichesNameSaad"),
+	quantityNumberSaad = document.getElementsByClassName("quantityNumberSaad");
+
+function createSaad(tableSaad_id) {
+	let table_bodySaad = document.getElementById(tableSaad_id),
+		first_trSaad = table_bodySaad.firstElementChild
+	tr_cloneSaad = first_trSaad.cloneNode(true);
+
+	table_bodySaad.append(tr_cloneSaad);
+
+	clean_first_trSaad(table_bodySaad.firstElementChild);
+}
+
+function clean_first_trSaad(firstTrSaad) {
+	let childrenSaad = firstTrSaad.children;
+	childrenSaad = Array.isArray(childrenSaad) ? childrenSaad : Object.values(childrenSaad);
+	childrenSaad.forEach(x => {
+		if (x !== firstTrSaad.lastElementChild) {
+			x.firstElementChild.value = '';
+		}
+	});
+}
+
+function remove_trSaad(This) {
+	myData.Employees.Saad = [];
+	if (This.closest('tbody').childElementCount == 1) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
+	} else {
+		This.closest('tr').remove();
+	}
+}
+
+function AddSaadOrder() {
+	myData.Employees.Saad = [];
+	var titlen = [];
+	for (var i = 0; i < sandwichesNameSaad.length; i++) {
+		for (var i = 0; i < quantityNumberSaad.length; i++) {
+			titlen[i] = {
+				sandwiches: sandwichesNameSaad[i].value,
+				quantity: Number(quantityNumberSaad[i].value)
+			};
+		}
+
+		myData.Employees.Saad = Object.assign(titlen, myData.Employees.Saad);
+		console.log(myData);
+	}
+}
+/* End Ali's Order */
+/* Start Ali's Order */
+let sandwichesNameAli = document.getElementsByClassName("sandwichesNameAli"),
+	quantityNumberAli = document.getElementsByClassName("quantityNumberAli");
+
+function createSaad(tableAli_id) {
+	let table_bodyAli = document.getElementById(tableAli_id),
+		first_trAli = table_bodySaad.firstElementChild
+	tr_cloneAli = first_trAli.cloneNode(true);
+
+	table_bodyAli.append(tr_cloneAli);
+
+	clean_first_trSaad(table_bodyAli.firstElementChild);
+}
+
+function clean_first_trAli(firstTrAli) {
+	let childrenAli = firstTrAli.children;
+	childrenAli = Array.isArray(childrenAli) ? childrenAli : Object.values(childrenAli);
+	childrenAli.forEach(x => {
+		if (x !== firstTrAli.lastElementChild) {
+			x.firstElementChild.value = '';
+		}
+	});
+}
+
+function remove_trAli(This) {
+	myData.Employees.Ali = [];
+	if (This.closest('tbody').childElementCount == 1) {
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: "You don't have permission to delete This",
+		})
+	} else {
+		This.closest('tr').remove();
+	}
+}
+
+function AddAliOrder() {
+	myData.Employees.Ali = [];
+	var titlen = [];
+	for (var i = 0; i < sandwichesNameAli.length; i++) {
+		for (var i = 0; i < quantityNumberAli.length; i++) {
+			titlen[i] = {
+				sandwiches: sandwichesNameAli[i].value,
+				quantity: Number(quantityNumberAli[i].value)
+			};
+		}
+
+		myData.Employees.Ali = Object.assign(titlen, myData.Employees.Ali);
+		console.log(myData);
+	}
+}
+/* End Ali's Order */
 function GetFinalOrder() {
 	document.getElementById("OrderParent").classList.remove("d-none");
 	let names = [],

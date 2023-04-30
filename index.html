@@ -795,7 +795,7 @@
                                              <th width="50px">
                                                 <div class="action_container">
                                                    <button class="primary"
-                                                      onclick="create_trSoliman('table_bodyIslam')">
+                                                      onclick="create_trSaad('table_bodyIslam')">
                                                       <i class="fa fa-plus"></i>
                                                    </button>
                                                 </div>
@@ -824,6 +824,98 @@
                                     </table>
                                     <div class="action_container w-100">
                                        <button class="success w-100 p-1" onclick="AddIslamOrder()">Done</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div id="white_bg" class="works_box ">
+                                 <h4>Ali</h4>
+                                 <br><br><br>
+                                 <div class="Ali-order-container">
+                                    <table class="_tableAli GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="primary"
+                                                      onclick="create_trAli('table_bodyAli')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodyAli">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameAli"
+                                                   placeholder="Ex: فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberAli"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trAli(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <div class="action_container w-100">
+                                       <button class="success w-100 p-1" onclick="AddSaadOrder()">Done</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div id="white_bg" class="works_box ">
+                                 <h4>Saad</h4>
+                                 <br><br><br>
+                                 <div class="Saad-order-container">
+                                    <table class="_tableSaad GeneralTable">
+                                       <thead>
+                                          <tr>
+                                             <th>Sandwich</th>
+                                             <th>Quantity</th>
+                                             <th width="50px">
+                                                <div class="action_container">
+                                                   <button class="primary"
+                                                      onclick="create_trSoliman('table_bodySaad')">
+                                                      <i class="fa fa-plus"></i>
+                                                   </button>
+                                                </div>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody id="table_bodySaad">
+                                          <tr>
+                                             <td>
+                                                <input type="text" class="form_control sandwichesNameSaad"
+                                                   placeholder="Ex: فول">
+                                             </td>
+                                             <td>
+                                                <input type="number" class="form_control quantityNumberSaad"
+                                                   placeholder="Ex: 1">
+                                             </td>
+                                             <td>
+                                                <div class="action_container">
+                                                   <button class="danger" onclick="remove_trSaad(this)">
+                                                      <i class="fa fa-close"></i>
+                                                   </button>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <div class="action_container w-100">
+                                       <button class="success w-100 p-1" onclick="AddSaadOrder()">Done</button>
                                     </div>
                                  </div>
                               </div>
