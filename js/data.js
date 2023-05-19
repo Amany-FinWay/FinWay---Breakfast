@@ -867,7 +867,7 @@ function AddElGammalOrder() {
 	}
 }
 /* End Gamal's Order */
-/* Start Ali's Order */
+/* Start Saad's Order */
 let sandwichesNameSaad = document.getElementsByClassName("sandwichesNameSaad"),
 	quantityNumberSaad = document.getElementsByClassName("quantityNumberSaad");
 
@@ -919,19 +919,19 @@ function AddSaadOrder() {
 		console.log(myData);
 	}
 }
-/* End Ali's Order */
+/* End Saad's Order */
 /* Start Ali's Order */
 let sandwichesNameAli = document.getElementsByClassName("sandwichesNameAli"),
 	quantityNumberAli = document.getElementsByClassName("quantityNumberAli");
 
-function createSaad(tableAli_id) {
+function create_trAli(tableAli_id) {
 	let table_bodyAli = document.getElementById(tableAli_id),
-		first_trAli = table_bodySaad.firstElementChild
+		first_trAli = table_bodyAli.firstElementChild
 	tr_cloneAli = first_trAli.cloneNode(true);
 
 	table_bodyAli.append(tr_cloneAli);
 
-	clean_first_trSaad(table_bodyAli.firstElementChild);
+	clean_first_trAli(table_bodyAli.firstElementChild);
 }
 
 function clean_first_trAli(firstTrAli) {
