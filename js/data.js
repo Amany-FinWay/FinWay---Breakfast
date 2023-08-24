@@ -867,32 +867,32 @@ function AddElGammalOrder() {
 	}
 }
 /* End Gamal's Order */
-/* Start Ali's Order */
-let sandwichesNameSaad = document.getElementsByClassName("sandwichesNameSaad"),
-	quantityNumberSaad = document.getElementsByClassName("quantityNumberSaad");
+/* Start Waheed's Order */
+let sandwichesNameWaheed = document.getElementsByClassName("sandwichesNameWaheed"),
+	quantityNumberWaheed = document.getElementsByClassName("quantityNumberWaheed");
 
-function createSaad(tableSaad_id) {
-	let table_bodySaad = document.getElementById(tableSaad_id),
-		first_trSaad = table_bodySaad.firstElementChild
-	tr_cloneSaad = first_trSaad.cloneNode(true);
+function createWaheed(tableWaheed_id) {
+	let table_bodyWaheed = document.getElementById(tableWaheed_id),
+		first_trWaheed = table_bodyWaheed.firstElementChild
+	tr_cloneWaheed = first_trWaheed.cloneNode(true);
 
-	table_bodySaad.append(tr_cloneSaad);
+	table_bodyWaheed.append(tr_cloneWaheed);
 
-	clean_first_trSaad(table_bodySaad.firstElementChild);
+	clean_first_trWaheed(table_bodyWaheed.firstElementChild);
 }
 
-function clean_first_trSaad(firstTrSaad) {
-	let childrenSaad = firstTrSaad.children;
-	childrenSaad = Array.isArray(childrenSaad) ? childrenSaad : Object.values(childrenSaad);
-	childrenSaad.forEach(x => {
-		if (x !== firstTrSaad.lastElementChild) {
+function clean_first_trWaheed(firstTrWaheed) {
+	let childrenWaheed = firstTrWaheed.children;
+	childrenWaheed = Array.isArray(childrenWaheed) ? childrenWaheed : Object.values(childrenWaheed);
+	childrenWaheed.forEach(x => {
+		if (x !== firstTrWaheed.lastElementChild) {
 			x.firstElementChild.value = '';
 		}
 	});
 }
 
-function remove_trSaad(This) {
-	myData.Employees.Saad = [];
+function remove_trWaheed(This) {
+	myData.Employees.Waheed = [];
 	if (This.closest('tbody').childElementCount == 1) {
 		Swal.fire({
 			icon: 'error',
@@ -904,34 +904,34 @@ function remove_trSaad(This) {
 	}
 }
 
-function AddSaadOrder() {
-	myData.Employees.Saad = [];
+function AddWaheedOrder() {
+	myData.Employees.Waheed = [];
 	var titlen = [];
-	for (var i = 0; i < sandwichesNameSaad.length; i++) {
-		for (var i = 0; i < quantityNumberSaad.length; i++) {
+	for (var i = 0; i < sandwichesNameWaheed.length; i++) {
+		for (var i = 0; i < quantityNumberWaheed.length; i++) {
 			titlen[i] = {
-				sandwiches: sandwichesNameSaad[i].value,
-				quantity: Number(quantityNumberSaad[i].value)
+				sandwiches: sandwichesNameWaheed[i].value,
+				quantity: Number(quantityNumberWaheed[i].value)
 			};
 		}
 
-		myData.Employees.Saad = Object.assign(titlen, myData.Employees.Saad);
+		myData.Employees.Waheed = Object.assign(titlen, myData.Employees.Waheed);
 		console.log(myData);
 	}
 }
-/* End Ali's Order */
+/* End Waheed's Order */
 /* Start Ali's Order */
 let sandwichesNameAli = document.getElementsByClassName("sandwichesNameAli"),
 	quantityNumberAli = document.getElementsByClassName("quantityNumberAli");
 
-function createSaad(tableAli_id) {
+function createAli(tableAli_id) {
 	let table_bodyAli = document.getElementById(tableAli_id),
-		first_trAli = table_bodySaad.firstElementChild
+		first_trAli = table_bodyAli.firstElementChild
 	tr_cloneAli = first_trAli.cloneNode(true);
 
 	table_bodyAli.append(tr_cloneAli);
 
-	clean_first_trSaad(table_bodyAli.firstElementChild);
+	clean_first_trAli(table_bodyAli.firstElementChild);
 }
 
 function clean_first_trAli(firstTrAli) {
