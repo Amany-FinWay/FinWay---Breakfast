@@ -924,7 +924,7 @@ function AddWaheedOrder() {
 let sandwichesNameAli = document.getElementsByClassName("sandwichesNameAli"),
 	quantityNumberAli = document.getElementsByClassName("quantityNumberAli");
 
-function createAli(tableAli_id) {
+function create_trAli(tableAli_id) {
 	let table_bodyAli = document.getElementById(tableAli_id),
 		first_trAli = table_bodyAli.firstElementChild
 	tr_cloneAli = first_trAli.cloneNode(true);
